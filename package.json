@@ -1,0 +1,57 @@
+{
+  "name": "dsh-filebox",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "DSH 插件：在 Harness 侧边栏收发 filebox 文件/文字，并给 agent 注册 filebox 传输工具。",
+  "license": "MIT",
+  "author": "Lyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyz-wave/dsh-filebox.git"
+  },
+  "homepage": "https://github.com/lyz-wave/dsh-filebox",
+  "bugs": {
+    "url": "https://github.com/lyz-wave/dsh-filebox/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "filebox",
+    "file-transfer"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "install.mjs",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

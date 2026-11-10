@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "filebox 文件箱",
+    "description": "在 DSH 里查看、发送、接收 filebox 投递箱里的文件和文字，支持自动同步。"
+  }
+}
